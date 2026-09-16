@@ -1,0 +1,73 @@
+a = 42
+b = 3.14159
+c = "Hello, Python!"
+d = True
+e = [1, 2, 3]
+f = (4, 5, 6)
+g = {"name": "Alice", "age": 30}
+h = {7, 8, 9}
+i = None
+
+print('Тип переменной a:', type(a))
+print('Тип переменной b:', type(b))
+print('Тип переменной c:', type(c))
+print('Тип переменной d:', type(d))
+print('Тип переменной e:', type(e))
+print('Тип переменной f:', type(f))
+print('Тип переменной g:', type(g))
+print('Тип переменной h:', type(h))
+print('Тип переменной i:', type(i))
+
+
+my_list=[1, 2, 3]
+print('Исходный список:', my_list)
+my_list[0]=100
+print('Измененный список:', my_list)
+#Поменял первый элемент списка
+
+my_tuple=(1, 2, 3)
+print('Исходный список:', my_tuple)
+my_tuple[0]=100
+print('Попытка изменить список:', my_tuple)
+#Попытался поменять кортеж, т.к. он неизменяемый ничего не получилось
+
+my_string='cat'
+print('Изначальная строка:', my_string)
+my_string[0]='b'
+print('Измененная строка:', my_string)
+#Попытка изменить строку тоже не увенчалась успехом, строка тоже является неизменяемой переменной
+
+try:
+    num1=input()
+    num2=input()
+    num2=int(num2)
+    num1=int(num1)
+    print(num1+num2)
+except:
+    print('Вы ввели некорректные данные для этой программы.')
+
+
+shopping_list=['молоко', 'сосики', 'огурцы']
+shopping_list.append('помидоры')
+print('Список покупок:', shopping_list)
+unique_items=set(shopping_list)
+print('Список покупок:', unique_items)
+
+
+name = input('Ваше имя: ')
+age_str = input('Ваш возраст: ')
+subjects_str = input('Любимые предметы (через запятую): ')
+age = int(age_str)
+subjects_list = [subject.strip() for subject in subjects_str.split(",")]
+student = {
+    'name': name,
+    'age': age,
+    'subjects': subjects_list
+}
+print('=' * 30)
+print('АНКЕТА СТУДЕНТА')
+print('=' * 30)
+print('Имя:', student['name'])
+print('Возраст:', student['age'])
+print('Любимые предметы:', student['subjects'])
+print('=' * 30)
